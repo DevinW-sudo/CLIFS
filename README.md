@@ -47,11 +47,33 @@ CLIFS measures this phenomenon through multiple complementary approaches:
 
 ### Environment Setup
 
-1. **Install Anaconda or Mamba if you don't have it already.**
+1. **Clone and navigate to the repository**:
+
+```bash
+git clone https://github.com/DevinW-sudo/CLIFS.git
+cd CLIFS
+```
+
+2. **Download pre-trained model and place in proper location**:
+
+```bash
+DIR="models/best_mbert_model/best_mbert_model/modern_BERT_fusion_augmented_data_finegrain"
+mkdir -p "$DIR"
+
+curl -s https://api.github.com/repos/DevinW-sudo/CLIFS/releases/tags/v0.1.0 \
+| jq -r '.assets[].browser_download_url' \
+| while read -r url; do
+    echo "Downloading $(basename "$url") ..."
+    curl -L -o "$DIR/$(basename "$url")" "$url"
+  done
+echo "Download complete."
+```
+
+3. **Install Anaconda or Mamba if you don't have it already.**
    - [Anaconda Installation Instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
    - [Mamba Installation Instructions](https://github.com/conda-forge/miniforge) I always recommend Mamba 😉
 
-2. **Create and activate conda environment**:
+4. **Create and activate conda environment**:
 
 First, navigate to the project root directory. Then, for systems with GPU support (CUDA), run:
 
@@ -66,13 +88,13 @@ conda env create -f environment_cpu.yml
 conda activate clifs_cpu
 ```
 
-3. **Install additional dependencies**:
+5. **Install additional dependencies**:
 
 ```bash
 pip install git+https://github.com/huggingface/transformers.git@31ab7168ff7e07f61c90134e5238c4d97606aa70
 ```
 
-4. **Install the CLIFS package**:
+6. **Install the CLIFS package**:
 
 ```bash
 pip install -e libs/clifs --use-pep517
