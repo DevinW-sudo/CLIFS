@@ -109,8 +109,12 @@ from clifs import clifs
 # Load your data
 df = pd.read_csv('your_data.csv')  # Must have 'text' column
 
-# Define known groups for your analysis (targets you already know about in your data)
-# NOTE: This parameter is optional; if not provided, CLIFS will use default generic group words. However, it is highly recommended to specify relevant groups for best performance. The list is expanded by the CLIFS system to include related terms.
+# Define known groups for your analysis
+# (targets you already know about in your data)
+# NOTE: This parameter is optional; if not provided, CLIFS will use
+# default generic group words. However, it is highly recommended to
+# specify relevant groups for best performance. The list is expanded
+# by the CLIFS system to include related terms.
 KNOWN_GROUPS = ["your", "target", "groups"]
 # e.g., KNOWN_GROUPS = {"religion", "religious", "church", "god", "college", "university", "school", "usa", "country", "america"}
 ```
@@ -176,8 +180,6 @@ The system generates multiple prediction columns:
 
 ## Example Input/Output
 
-**NOTE:** Examples comes from the test set of the Wright et al. (2025) paper, of which all data is repurposed from the publicly available [Ashokkumar & Pennebaker (2022) dataset](https://osf.io/dwkec/files/osfstorage). See the paper for full details.
-
 ### High Fusion Example
 
 **VIFS Score: 7.0**
@@ -211,6 +213,8 @@ The system generates multiple prediction columns:
 **Output From All Methods:**
 
 <img src="images/output.png" alt="CLIFS Output Example" style="border-radius: 15px;"/>
+
+**NOTE:** Examples comes from the test set of the Wright et al. (2025) paper, of which all data is repurposed from the publicly available [Ashokkumar & Pennebaker (2022) dataset](https://osf.io/dwkec/files/osfstorage). See the paper for full details.
 
 ## Model Files
 
