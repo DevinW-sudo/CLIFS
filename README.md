@@ -54,7 +54,7 @@ git clone https://github.com/DevinW-sudo/CLIFS.git
 cd CLIFS
 ```
 
-2. **Download pre-trained model and place in proper directory**:
+2. **Download fine-tuned model and place in proper directory**:
 
 ```bash
 DIR="models/best_mbert_model/best_mbert_model/modern_BERT_fusion_augmented_data_finegrain"
@@ -175,6 +175,8 @@ The system generates multiple prediction columns:
 * `clifs_fusion_r`: Continuous fusion score
 
 ## Example Input/Output
+
+**NOTE:** Examples comes from the test set of the Wright et al. (2025) paper, of which all data is repurposed from the publicly available [Ashokkumar & Pennebaker (2022) dataset](https://osf.io/dwkec/files/osfstorage). See the paper for full details.
 
 ### High Fusion Example
 
