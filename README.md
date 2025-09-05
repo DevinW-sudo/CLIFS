@@ -54,7 +54,7 @@ git clone https://github.com/DevinW-sudo/CLIFS.git
 cd CLIFS
 ```
 
-2. **Download pre-trained model and place in proper location**:
+2. **Download pre-trained model and place in proper directory**:
 
 ```bash
 DIR="models/best_mbert_model/best_mbert_model/modern_BERT_fusion_augmented_data_finegrain"
