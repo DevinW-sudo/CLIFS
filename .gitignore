@@ -1,0 +1,48 @@
+# ------------------------
+# OS-specific
+# ------------------------
+# macOS temporary files
+.DS_Store
+._*
+
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+*.toml
+
+# ------------------------
+# Jupyter
+# ------------------------
+.ipynb_checkpoints/
+
+# ------------------------
+# Build / Packaging
+# ------------------------
+build/
+dist/
+*.zip
+condaenv*
+
+# ------------------------
+# Editors / IDEs
+# ------------------------
+.vscode/
+
+# ------------------------
+# Project-specific
+# ------------------------
+faiss_index.index
+exec_dir/
+training_log.txt
+temp.md
+environment_old.yml
+environment_cpu_old.yml
+
+# ------------------------
+# Fine-tuned LLM
+# ------------------------
+modern_BERT_fusion*/
