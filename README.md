@@ -11,7 +11,7 @@ CLIFS (Cognitive Linguistic Identity Fusion Score) is the official implementatio
 CLIFS outperformed all prior methods and human annotation:
 
 - **6–154%** classification improvement vs. **baselines**
-- **2–30$\times$** correlation performance for regression vs. **baselines**
+- **2–30x** correlation performance for regression vs. **baselines**
 - **11–22%** improvement vs. **human** annotation (classification)
 - **10%** correlation gain vs. **human** annotation (regression)
 - **25%** error reduction vs. **human** annotation (regression)
