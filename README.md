@@ -10,17 +10,17 @@ CLIFS (Cognitive Linguistic Identity Fusion Score) is the official implementatio
 
 CLIFS outperformed all prior methods and human annotation:
 
-- **+6–154%** classification improvement vs. **baselines**
-- **+128–2,914%** correlation gain for regression vs. **baselines**
-- **+11–22%** improvement vs. **human** annotation (classification)
-- **+10%** correlation gain vs. **human** annotation (regression)
-- **-25%** error reduction vs. **human** annotation (regression)
+- **6–154%** classification improvement vs. **baselines**
+- **2–30$\times$** correlation performance for regression vs. **baselines**
+- **11–22%** improvement vs. **human** annotation (classification)
+- **10%** correlation gain vs. **human** annotation (regression)
+- **25%** error reduction vs. **human** annotation (regression)
 
 Practical Downstream Impact:
 
 - Violence Risk Prediction
     - Integrated CLIFS into violence risk prediction model
-    - **+240%** classification improvement over existing fusion-based violence risk assessment
+    - **>240%** classification improvement over existing fusion-based violence risk assessment
     - Demonstrates CLIFS's applied value in counter-radicalization and security
 
 ## Overview
@@ -34,7 +34,7 @@ CLIFS measures this phenomenon through multiple complementary approaches:
   <img src="images/method.png" alt="CLIFS Architecture Diagram" width="700" style="border-radius: 15px;"/>
 </p>
 
-1. **Masked Language Model Identity Fusion (MLMIF)**: Uses transformer models to compute bidirectional (reciprocal) conceptual similarity scores between identity and target words [the scores; $f(I, T)$ (Fusion Proximity), $K_f$ (Fictive Kinship), $S_{I \to T}$, and $S_{T \to I}$ (the directional proximity scores), described fully in the EMNLP paper].
+1. **Masked Language Model Identity Fusion (MLMIF)**: Uses transformer models to compute bidirectional (reciprocal) conceptual similarity scores between identity and target words [the scores; $f(I, T)$ (Fusion Proximity), $K_f$ (Fictive Kinship), $S_{I \to T}$, and $S_{T \to I}$ (the directional proximity scores), described fully in the paper].
 2. **naive Unquestioning Affiliation Index (nUAI)**: Measures affiliation and cognitive processing patterns in text. Based on Ashokkumar & Pennebaker (2022). The naive version is introduced in the Wright et al. (2025) paper. However, the full version can be found in libs/ directory for reference.
 3. **Violence Risk Index Lite (VRI-lite)**: Tracks fusion-related (kinship) and identification vocabulary usage. Based on Ebner et al. (2023). The lite version here only includes the core markers relevant to fusion, omitting additional violence risk factors (and irrelevant narrative categories which include harmful content). The full version is used as comparison in the EMNLP 2025 paper, but is not included in the public repository to avoid ethical concerns. CLIFS itself only uses the lite version (Wright et al., 2025).
 4. **ModernBERT Classification**: Fine-tuned transformer model for direct fusion classification and softmax probabilities.
@@ -75,7 +75,7 @@ echo "Download complete."
 
 4. **Create and activate conda environment**:
 
-First, navigate to the project root directory. Then, for systems with GPU support (CUDA), run:
+For systems with GPU support (CUDA), run:
 
 ```bash
 conda env create -f environment.yml
@@ -88,7 +88,7 @@ conda env create -f environment_cpu.yml
 conda activate clifs_cpu
 ```
 
-5. **Install additional dependencies**:
+1. **Install additional dependencies**:
 
 ```bash
 pip install git+https://github.com/huggingface/transformers.git@31ab7168ff7e07f61c90134e5238c4d97606aa70
@@ -259,7 +259,7 @@ CLIFS is a research tool intended to augment—not replace—human judgment, esp
 
 This framework is the reference codebase for the following publication:
 
-* **Wright, Devin R., An, Jisun, & Ahn, Yong-Yeol. (2025). Cognitive Linguistic Identity Fusion Score (CLIFS): A Scalable Cognition-Informed Approach to Quantifying Identity Fusion from Text. *Proceedings of EMNLP 2025*.** To appear.
+* **Wright, Devin R., An, Jisun, & Ahn, Yong-Yeol. (2025). Cognitive Linguistic Identity Fusion Score (CLIFS): A Scalable Cognition-Informed Approach to Quantifying Identity Fusion from Text. *Proceedings of EMNLP 2025*. In press.** 
 
 If you use CLIFS in your research, please cite the EMNLP 2025 paper introducing the method:
 
@@ -268,7 +268,8 @@ If you use CLIFS in your research, please cite the EMNLP 2025 paper introducing 
   title={Cognitive Linguistic Identity Fusion Score (CLIFS): A Scalable Cognition-Informed Approach to Quantifying Identity Fusion from Text},
   author={Wright, Devin R. and An, Jisun and Ahn, Yong-Yeol},
   booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  year={2025}
+  year={2025},
+  note={In press}
 }
 ```
 
