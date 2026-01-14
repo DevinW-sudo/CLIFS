@@ -265,11 +265,23 @@ If you use CLIFS in your research, please cite the EMNLP 2025 paper introducing 
 
 ```bibtex
 @inproceedings{wright2025clifs,
-  title={Cognitive Linguistic Identity Fusion Score (CLIFS): A Scalable Cognition-Informed Approach to Quantifying Identity Fusion from Text},
-  author={Wright, Devin R. and An, Jisun and Ahn, Yong-Yeol},
-  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  year={2025},
-  note={In press}
+    title = "Cognitive Linguistic Identity Fusion Score ({CLIFS}): A Scalable {C}ognition{-}{I}nformed Approach to Quantifying Identity Fusion from Text",
+    author = "Wright, Devin R.  and
+      An, Jisun  and
+      Ahn, Yong-Yeol",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.588/",
+    doi = "10.18653/v1/2025.emnlp-main.588",
+    pages = "11643--11673",
+    ISBN = "979-8-89176-332-6"
 }
 ```
 
